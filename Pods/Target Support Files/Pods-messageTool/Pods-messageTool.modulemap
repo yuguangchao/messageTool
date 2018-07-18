@@ -1,0 +1,6 @@
+module Pods_messageTool [system] {
+  umbrella header "Pods-messageTool-umbrella.h"
+
+  export *
+  module * { export * }
+}
