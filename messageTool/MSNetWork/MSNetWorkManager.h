@@ -20,6 +20,11 @@
 //修改密码
 + (NSURLSessionTask *)modifyPassWord:(NSDictionary *)param success:(void(^)(MSServerResultBase *result))success failure:(void (^)(MSServerResultBase *error))failure;
 //获取短信发送状态
++ (NSURLSessionTask *)getSendStatus:(NSDictionary *)param success:(void(^)(MSServerResultBase *result))success failure:(void (^)(MSServerResultBase *error))failure;
+//注册
++ (NSURLSessionTask *)registerAccount:(NSDictionary *)param success:(void(^)(MSServerResultBase *result))success failure:(void (^)(MSServerResultBase *error))failure;
+//登录
++ (NSURLSessionTask *)loginAccount:(NSString *)account Password:(NSString *)password success:(void(^)(MSServerResultBase *result))success failure:(void (^)(MSServerResultBase *error))failure;
 //查询强制签名
 + (NSURLSessionTask *)getForceSign:(NSDictionary *)param success:(void(^)(MSServerResultBase *result))success failure:(void (^)(MSServerResultBase *error))failure;
 @end

@@ -40,6 +40,11 @@
 #define MSBackGroundGreyColor MSColor(239, 239, 239)
 //接口
 #define MS_BaseUrl @"http://www.dxqf188.cn/sms.aspx"
+//二期接口
+#define MS_BaseUrlV2 @"http://59.110.217.96:8090"
+#define MS_Register_Url @"/httplogin/reg.html"
+#define MS_Login_Url @"/httplogin/ckLogin.html"
+#define MS_GetSign_Url @"/httplogin/getSign.html"
 //数据本地持久化
 #define MSUserInfo @"UserInfo"
 #define MSSign @"sign"

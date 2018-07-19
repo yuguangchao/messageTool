@@ -9,10 +9,11 @@
 #import "MSLoginView.h"
 #import "MSHeaderFile.h"
 #import "MSLoginSubView.h"
-@interface MSLoginView ()
+#import "TTTAttributedLabel.h"
+@interface MSLoginView () <TTTAttributedLabelDelegate>
 @property (strong, nonatomic) UILabel *tipLabel;
 @property (strong, nonatomic) MSLoginSubView *containerView;
-@property (strong, nonatomic) UILabel *phoneLabel;
+@property (strong, nonatomic) TTTAttributedLabel *phoneLabel;
 @property (strong, nonatomic) UIButton *registerBtn;
 @property (strong, nonatomic) UILabel *adverLabel;
 @end
@@ -42,6 +43,17 @@
         make.height.mas_equalTo(SizeValueBase6Plus(320));
         make.width.mas_equalTo(SizeValueBase6Plus(320));
     }];
+    [_registerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.containerView.mas_bottom).offset(SizeValueBase6Plus(10));
+        make.right.mas_equalTo(self.containerView.mas_right);
+        make.width.mas_equalTo(SizeValueBase6Plus(80));
+        make.height.mas_equalTo(SizeValueBase6Plus(30));
+    }];
+    [_adverLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self);
+        make.bottom.mas_equalTo(self.phoneLabel.mas_top).offset(SizeValueBase6Plus(-40));
+        make.left.right.mas_equalTo(self);
+    }];
     [_phoneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self);
         make.bottom.mas_equalTo(self).offset(SizeValueBase6Plus(-20));
@@ -68,9 +80,9 @@
             MSLoginSubView *view = [[MSLoginSubView alloc] init];
             view.layer.cornerRadius = SizeValueBase6Plus(8);
             __weak typeof(self) weakself=self;
-            view.loginBlock = ^(NSString *uid, NSString *account, NSString *password) {
+            view.loginBlock = ^(NSString *account, NSString *password) {
                 if (weakself.loginViewBlock) {
-                    weakself.loginViewBlock(uid, account, password);
+                    weakself.loginViewBlock(account, password);
                 }
             };
             view.AgreemenBlock = ^{
@@ -112,22 +124,33 @@
     }
     return _adverLabel;
 }
-- (UILabel *)phoneLabel
+- (TTTAttributedLabel *)phoneLabel
 {
     if (!_phoneLabel) {
         _phoneLabel = ({
-            UILabel *lable = [[UILabel alloc] init];
-            lable.textAlignment = NSTextAlignmentCenter;
-            lable.font = FONTSIZE(16);
-            lable.textColor = [UIColor whiteColor];
-            lable.text = @"7*24小时客服电话：15822330727王经理（同微信）";
-            lable;
+            TTTAttributedLabel *detailL = [[TTTAttributedLabel alloc] initWithFrame:CGRectNull];
+            detailL.textAlignment = NSTextAlignmentCenter;
+            detailL.font = FONTSIZE(16);
+            detailL.textColor = [UIColor whiteColor];
+            detailL.delegate = self;
+            detailL.enabledTextCheckingTypes = NSTextCheckingTypePhoneNumber;
+            detailL.text = @"7*24小时客服电话：15822330727 王经理（同微信）";
+            detailL;
         });
     }
     return _phoneLabel;
 }
 - (void)regisetClick
 {
+    NSLog(@"注册");
+}
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithPhoneNumber:(NSString *)phoneNumber
+{
+    if (SYSTEM_VERSION >= 10.0) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",phoneNumber]] options:@{} completionHandler:nil];
+    }else{
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",phoneNumber]]];
+    }
     
 }
 @end

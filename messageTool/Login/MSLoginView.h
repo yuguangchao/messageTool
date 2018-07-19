@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MSLoginView : UIView
-@property (copy, nonatomic) void (^loginViewBlock)(NSString *uid,NSString *account,NSString *password);
+@property (copy, nonatomic) void (^loginViewBlock)(NSString *account,NSString *password);
 @property (copy, nonatomic) dispatch_block_t learnAgreementBlock;
 @end

@@ -27,6 +27,7 @@
 		3C46BADF20BF9DB3009ECF21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C46BADE20BF9DB3009ECF21 /* InfoPlist.strings */; };
 		3C46BAE120BF9F33009ECF21 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C46BAE020BF9F33009ECF21 /* Launch Screen.storyboard */; };
 		3C46BAE320BF9FAA009ECF21 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C46BAE220BF9FAA009ECF21 /* Localizable.strings */; };
+		3C48494521003AB900C56D6A /* MQVerCodeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48494421003AB900C56D6A /* MQVerCodeImageView.m */; };
 		3C9CB30320A33C0300DBB895 /* MSDropTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9CB30220A33C0300DBB895 /* MSDropTableViewCell.m */; };
 		3CB51CCB209C43A100902842 /* MSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB51CCA209C43A100902842 /* MSBaseViewController.m */; };
 		3CB51CCF209C464A00902842 /* MStabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB51CCE209C464A00902842 /* MStabBarController.m */; };
@@ -118,6 +119,8 @@
 		3C46BADE20BF9DB3009ECF21 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		3C46BAE020BF9F33009ECF21 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3C46BAE220BF9FAA009ECF21 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		3C48494321003AB900C56D6A /* MQVerCodeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQVerCodeImageView.h; sourceTree = "<group>"; };
+		3C48494421003AB900C56D6A /* MQVerCodeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQVerCodeImageView.m; sourceTree = "<group>"; };
 		3C9CB30120A33C0300DBB895 /* MSDropTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSDropTableViewCell.h; sourceTree = "<group>"; };
 		3C9CB30220A33C0300DBB895 /* MSDropTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSDropTableViewCell.m; sourceTree = "<group>"; };
 		3CB51CC9209C43A100902842 /* MSBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSBaseViewController.h; sourceTree = "<group>"; };
@@ -399,6 +402,8 @@
 				3CB51CE5209C97D900902842 /* MSLoginView.m */,
 				3CB51CE7209CA6D300902842 /* MSLoginSubView.h */,
 				3CB51CE8209CA6D300902842 /* MSLoginSubView.m */,
+				3C48494321003AB900C56D6A /* MQVerCodeImageView.h */,
+				3C48494421003AB900C56D6A /* MQVerCodeImageView.m */,
 				3CB51CF5209D7A2400902842 /* MSAgreementViewController.h */,
 				3CB51CF6209D7A2400902842 /* MSAgreementViewController.m */,
 			);
@@ -669,6 +674,7 @@
 				3CC05F55209F465900D74C33 /* MSSetSignView.m in Sources */,
 				3CB51CCF209C464A00902842 /* MStabBarController.m in Sources */,
 				3CB51CE3209C910900902842 /* UIImage+Color.m in Sources */,
+				3C48494521003AB900C56D6A /* MQVerCodeImageView.m in Sources */,
 				3C15B036209C2A7700D843E6 /* main.m in Sources */,
 				3C15B02E209C2A7600D843E6 /* messageTool.xcdatamodeld in Sources */,
 			);

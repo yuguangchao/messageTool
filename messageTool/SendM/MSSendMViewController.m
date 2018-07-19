@@ -21,7 +21,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSDictionary *remanentDict = [[NSUserDefaults standardUserDefaults] objectForKey:MSUserInfo];
-    
     [MSNetWorkManager queryAccountBnalance:remanentDict success:^(MSServerResultBase *result) {
         [self.rightBtn setTitle:[NSString stringWithFormat:@"剩余%@条",result.retInfo] forState:UIControlStateNormal];
     } failure:^(MSServerResultBase *error) {

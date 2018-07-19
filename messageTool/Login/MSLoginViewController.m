@@ -20,11 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view = self.loginView;
-    [MSNetWorkManager getForceSign:nil success:^(MSServerResultBase *result) {
-        
-    } failure:^(MSServerResultBase *error) {
-        
-    }];
 }
 - (MSLoginView *)loginView
 {
@@ -32,8 +27,8 @@
         _loginView = ({
             MSLoginView *view = [[MSLoginView alloc] initWithFrame:self.view.bounds];
             __weak typeof(self) weakself=self;
-            view.loginViewBlock = ^(NSString *uid, NSString *account, NSString *password) {
-                [weakself gotoLoginWithUid:uid Account:account PassWord:password];
+            view.loginViewBlock = ^(NSString *account, NSString *password) {
+                [weakself gotoLoginWithAccount:account PassWord:password];
             };
             view.learnAgreementBlock = ^{
                 [weakself gotoAgreement];
@@ -43,17 +38,17 @@
     }
     return _loginView;
 }
-- (void)gotoLoginWithUid:(NSString *)uid Account:(NSString *)account PassWord:(NSString *)password
+- (void)gotoLoginWithAccount:(NSString *)account PassWord:(NSString *)password
 {
-    NSDictionary *param = @{@"userid":uid,
-                            @"account":account,
-                            @"password":password
-                            };
     [HUD showCustomHudWithStatus:@"正在登录" onView:self.view];
-    [MSNetWorkManager queryAccountBnalance:param success:^(MSServerResultBase *result) {
+    [MSNetWorkManager loginAccount:account Password:password success:^(MSServerResultBase *result) {
         [HUD dismiss];
         [HUD showInfo:@"登录成功" onView:self.view];
         //本地存储
+        NSDictionary *param = @{@"userid":result.retInfo,
+                                @"account":account,
+                                @"password":password
+                                };
         [[NSUserDefaults standardUserDefaults] setObject:param forKey:MSUserInfo];
         [[NSUserDefaults standardUserDefaults] synchronize];
         APPWindow.rootViewController = [MStabBarController new];
