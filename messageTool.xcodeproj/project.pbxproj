@@ -11,7 +11,6 @@
 		3C0714EB20A0892600A26FD0 /* MSServerResultBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0714EA20A0892600A26FD0 /* MSServerResultBase.m */; };
 		3C0714EF20A0A70C00A26FD0 /* MSNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0714EE20A0A70C00A26FD0 /* MSNetWorkManager.m */; };
 		3C0C60E320A563A900B9F483 /* MSAddressBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C60E220A563A900B9F483 /* MSAddressBookModel.m */; };
-		3C0C60F120A5AA5700B9F483 /* BMChineseSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C60F020A5AA5700B9F483 /* BMChineseSort.m */; };
 		3C0C60F720A5F94000B9F483 /* NSString+RegexCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C60F520A5F93F00B9F483 /* NSString+RegexCategory.m */; };
 		3C0C60FA20A6BAB300B9F483 /* NSString+UrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C60F820A6BAB300B9F483 /* NSString+UrlEncode.m */; };
 		3C15B025209C2A7500D843E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C15B024209C2A7500D843E6 /* AppDelegate.m */; };
@@ -28,6 +27,11 @@
 		3C46BAE120BF9F33009ECF21 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C46BAE020BF9F33009ECF21 /* Launch Screen.storyboard */; };
 		3C46BAE320BF9FAA009ECF21 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C46BAE220BF9FAA009ECF21 /* Localizable.strings */; };
 		3C48494521003AB900C56D6A /* MQVerCodeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C48494421003AB900C56D6A /* MQVerCodeImageView.m */; };
+		3C87F40821017D6500AE6CD1 /* MSHaveSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C87F40721017D6500AE6CD1 /* MSHaveSendViewController.m */; };
+		3C87F40B21017DB600AE6CD1 /* MSHaveSendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C87F40A21017DB600AE6CD1 /* MSHaveSendView.m */; };
+		3C87F40E2101BA3A00AE6CD1 /* MSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C87F40D2101BA3A00AE6CD1 /* MSRegisterViewController.m */; };
+		3C87F4112101D48500AE6CD1 /* MSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C87F4102101D48500AE6CD1 /* MSMainViewController.m */; };
+		3C87F4142101DAD100AE6CD1 /* MSMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C87F4132101DAD100AE6CD1 /* MSMainView.m */; };
 		3C9CB30320A33C0300DBB895 /* MSDropTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9CB30220A33C0300DBB895 /* MSDropTableViewCell.m */; };
 		3CB51CCB209C43A100902842 /* MSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB51CCA209C43A100902842 /* MSBaseViewController.m */; };
 		3CB51CCF209C464A00902842 /* MStabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB51CCE209C464A00902842 /* MStabBarController.m */; };
@@ -92,8 +96,6 @@
 		3C0714EE20A0A70C00A26FD0 /* MSNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSNetWorkManager.m; sourceTree = "<group>"; };
 		3C0C60E120A563A900B9F483 /* MSAddressBookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSAddressBookModel.h; sourceTree = "<group>"; };
 		3C0C60E220A563A900B9F483 /* MSAddressBookModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSAddressBookModel.m; sourceTree = "<group>"; };
-		3C0C60EF20A5AA5700B9F483 /* BMChineseSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMChineseSort.h; sourceTree = "<group>"; };
-		3C0C60F020A5AA5700B9F483 /* BMChineseSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMChineseSort.m; sourceTree = "<group>"; };
 		3C0C60F520A5F93F00B9F483 /* NSString+RegexCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegexCategory.m"; sourceTree = "<group>"; };
 		3C0C60F620A5F93F00B9F483 /* NSString+RegexCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RegexCategory.h"; sourceTree = "<group>"; };
 		3C0C60F820A6BAB300B9F483 /* NSString+UrlEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UrlEncode.m"; sourceTree = "<group>"; };
@@ -121,6 +123,16 @@
 		3C46BAE220BF9FAA009ECF21 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3C48494321003AB900C56D6A /* MQVerCodeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQVerCodeImageView.h; sourceTree = "<group>"; };
 		3C48494421003AB900C56D6A /* MQVerCodeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQVerCodeImageView.m; sourceTree = "<group>"; };
+		3C87F40621017D6500AE6CD1 /* MSHaveSendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSHaveSendViewController.h; sourceTree = "<group>"; };
+		3C87F40721017D6500AE6CD1 /* MSHaveSendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSHaveSendViewController.m; sourceTree = "<group>"; };
+		3C87F40921017DB600AE6CD1 /* MSHaveSendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSHaveSendView.h; sourceTree = "<group>"; };
+		3C87F40A21017DB600AE6CD1 /* MSHaveSendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSHaveSendView.m; sourceTree = "<group>"; };
+		3C87F40C2101BA3A00AE6CD1 /* MSRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRegisterViewController.h; sourceTree = "<group>"; };
+		3C87F40D2101BA3A00AE6CD1 /* MSRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSRegisterViewController.m; sourceTree = "<group>"; };
+		3C87F40F2101D48500AE6CD1 /* MSMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSMainViewController.h; sourceTree = "<group>"; };
+		3C87F4102101D48500AE6CD1 /* MSMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSMainViewController.m; sourceTree = "<group>"; };
+		3C87F4122101DAD100AE6CD1 /* MSMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSMainView.h; sourceTree = "<group>"; };
+		3C87F4132101DAD100AE6CD1 /* MSMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSMainView.m; sourceTree = "<group>"; };
 		3C9CB30120A33C0300DBB895 /* MSDropTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSDropTableViewCell.h; sourceTree = "<group>"; };
 		3C9CB30220A33C0300DBB895 /* MSDropTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSDropTableViewCell.m; sourceTree = "<group>"; };
 		3CB51CC9209C43A100902842 /* MSBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSBaseViewController.h; sourceTree = "<group>"; };
@@ -235,8 +247,6 @@
 		3C0C60E020A562B300B9F483 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3C0C60EF20A5AA5700B9F483 /* BMChineseSort.h */,
-				3C0C60F020A5AA5700B9F483 /* BMChineseSort.m */,
 				3C0C60E120A563A900B9F483 /* MSAddressBookModel.h */,
 				3C0C60E220A563A900B9F483 /* MSAddressBookModel.m */,
 			);
@@ -317,6 +327,10 @@
 				3CB51CD0209C489F00902842 /* MSNavigationController.h */,
 				3CB51CD1209C489F00902842 /* MSNavigationController.m */,
 				3CB51CD3209C499A00902842 /* MSHeaderFile.h */,
+				3C87F40F2101D48500AE6CD1 /* MSMainViewController.h */,
+				3C87F4102101D48500AE6CD1 /* MSMainViewController.m */,
+				3C87F4122101DAD100AE6CD1 /* MSMainView.h */,
+				3C87F4132101DAD100AE6CD1 /* MSMainView.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -345,6 +359,10 @@
 				3CCD6DCA20A48D5B00632514 /* MSContactsTableViewCell.m */,
 				3CCD6DCC20A49DC900632514 /* THDatePickerView.h */,
 				3CCD6DCD20A49DC900632514 /* THDatePickerView.m */,
+				3C87F40621017D6500AE6CD1 /* MSHaveSendViewController.h */,
+				3C87F40721017D6500AE6CD1 /* MSHaveSendViewController.m */,
+				3C87F40921017DB600AE6CD1 /* MSHaveSendView.h */,
+				3C87F40A21017DB600AE6CD1 /* MSHaveSendView.m */,
 			);
 			path = SendM;
 			sourceTree = "<group>";
@@ -406,6 +424,8 @@
 				3C48494421003AB900C56D6A /* MQVerCodeImageView.m */,
 				3CB51CF5209D7A2400902842 /* MSAgreementViewController.h */,
 				3CB51CF6209D7A2400902842 /* MSAgreementViewController.m */,
+				3C87F40C2101BA3A00AE6CD1 /* MSRegisterViewController.h */,
+				3C87F40D2101BA3A00AE6CD1 /* MSRegisterViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -640,6 +660,7 @@
 				3CB51CF7209D7A2400902842 /* MSAgreementViewController.m in Sources */,
 				3C9CB30320A33C0300DBB895 /* MSDropTableViewCell.m in Sources */,
 				3CCD6DC520A47BB400632514 /* MSManualAddView.m in Sources */,
+				3C87F40E2101BA3A00AE6CD1 /* MSRegisterViewController.m in Sources */,
 				3CB51CFF209D84F500902842 /* MSMoreTableViewCell.m in Sources */,
 				3C0C60E320A563A900B9F483 /* MSAddressBookModel.m in Sources */,
 				3CB51CE9209CA6D300902842 /* MSLoginSubView.m in Sources */,
@@ -653,11 +674,11 @@
 				3CB51D08209D976600902842 /* MSHelpCenterViewController.m in Sources */,
 				3C0C60FA20A6BAB300B9F483 /* NSString+UrlEncode.m in Sources */,
 				3CCD6DC820A47BC800632514 /* MSContactsView.m in Sources */,
-				3C0C60F120A5AA5700B9F483 /* BMChineseSort.m in Sources */,
 				3CB51CFC209D811A00902842 /* MSMoreView.m in Sources */,
 				3CB51CF4209CC39400902842 /* UIView+Frame.m in Sources */,
 				3C0714E520A088D600A26FD0 /* MSRequestManager.m in Sources */,
 				3CB51CD6209C512C00902842 /* MSLoginViewController.m in Sources */,
+				3C87F40821017D6500AE6CD1 /* MSHaveSendViewController.m in Sources */,
 				3C4234E620B54B9800256AB3 /* MSPrivacyAgreementViewController.m in Sources */,
 				3C0714EF20A0A70C00A26FD0 /* MSNetWorkManager.m in Sources */,
 				3CCD6DBF20A47B3E00632514 /* MSMAddanualViewController.m in Sources */,
@@ -669,11 +690,14 @@
 				3CB51D0E209DE45100902842 /* MSRecommentView.m in Sources */,
 				3CCD6DCB20A48D5B00632514 /* MSContactsTableViewCell.m in Sources */,
 				3CB51D02209D85D800902842 /* MSMoreFunctionModel.m in Sources */,
+				3C87F4142101DAD100AE6CD1 /* MSMainView.m in Sources */,
 				3C228CF020A1E25D00B1D1C2 /* MSDropDownView.m in Sources */,
 				3CB51CD2209C489F00902842 /* MSNavigationController.m in Sources */,
 				3CC05F55209F465900D74C33 /* MSSetSignView.m in Sources */,
 				3CB51CCF209C464A00902842 /* MStabBarController.m in Sources */,
 				3CB51CE3209C910900902842 /* UIImage+Color.m in Sources */,
+				3C87F4112101D48500AE6CD1 /* MSMainViewController.m in Sources */,
+				3C87F40B21017DB600AE6CD1 /* MSHaveSendView.m in Sources */,
 				3C48494521003AB900C56D6A /* MQVerCodeImageView.m in Sources */,
 				3C15B036209C2A7700D843E6 /* main.m in Sources */,
 				3C15B02E209C2A7600D843E6 /* messageTool.xcdatamodeld in Sources */,
@@ -830,7 +854,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 路生 王 (5JPVK47Z83)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9GU8M9U96G;
 				ENABLE_BITCODE = NO;
@@ -854,7 +878,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 路生 王 (5JPVK47Z83)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9GU8M9U96G;
 				ENABLE_BITCODE = NO;

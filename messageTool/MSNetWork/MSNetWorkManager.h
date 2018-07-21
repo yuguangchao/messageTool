@@ -27,4 +27,6 @@
 + (NSURLSessionTask *)loginAccount:(NSString *)account Password:(NSString *)password success:(void(^)(MSServerResultBase *result))success failure:(void (^)(MSServerResultBase *error))failure;
 //查询强制签名
 + (NSURLSessionTask *)getForceSign:(NSDictionary *)param success:(void(^)(MSServerResultBase *result))success failure:(void (^)(MSServerResultBase *error))failure;
+//查询回复短信
+
 @end

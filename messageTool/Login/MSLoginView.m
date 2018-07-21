@@ -142,7 +142,9 @@
 }
 - (void)regisetClick
 {
-    NSLog(@"注册");
+    if (self.registerBlock) {
+        self.registerBlock();
+    }
 }
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithPhoneNumber:(NSString *)phoneNumber
 {

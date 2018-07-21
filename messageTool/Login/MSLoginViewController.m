@@ -11,6 +11,7 @@
 #import "MSAgreementViewController.h"
 #import "MSNavigationController.h"
 #import "MSHeaderFile.h"
+#import "MSRegisterViewController.h"
 @interface MSLoginViewController ()
 @property (strong, nonatomic) MSLoginView *loginView;
 @end
@@ -32,6 +33,9 @@
             };
             view.learnAgreementBlock = ^{
                 [weakself gotoAgreement];
+            };
+            view.registerBlock = ^{
+                [weakself gotoResiterView];
             };
             view;
         });
@@ -60,6 +64,11 @@
 - (void)gotoAgreement
 {
     MSNavigationController *navigationVC = [[MSNavigationController alloc] initWithRootViewController:[MSAgreementViewController new]];
+    [self presentViewController:navigationVC animated:YES completion:nil];
+}
+- (void)gotoResiterView
+{
+    MSNavigationController *navigationVC = [[MSNavigationController alloc] initWithRootViewController:[MSRegisterViewController new]];
     [self presentViewController:navigationVC animated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {

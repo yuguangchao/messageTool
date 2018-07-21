@@ -10,9 +10,11 @@
 #import "MSSendMView.h"
 #import "MSHeaderFile.h"
 #import "MSContactsViewController.h"
+#import "MSHaveSendViewController.h"
 @interface MSSendMViewController ()
 @property (nonatomic, strong) MSSendMView *sendView;
 @property (nonatomic, strong) UIButton *rightBtn;
+@property (nonatomic, copy) NSString *remainderMStr;
 @end
 
 @implementation MSSendMViewController
@@ -22,11 +24,14 @@
     // Do any additional setup after loading the view.
     NSDictionary *remanentDict = [[NSUserDefaults standardUserDefaults] objectForKey:MSUserInfo];
     [MSNetWorkManager queryAccountBnalance:remanentDict success:^(MSServerResultBase *result) {
-        [self.rightBtn setTitle:[NSString stringWithFormat:@"剩余%@条",result.retInfo] forState:UIControlStateNormal];
+        self.remainderMStr = [NSString stringWithFormat:@"剩余%@条  · · ·",result.retInfo];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
     } failure:^(MSServerResultBase *error) {
+        self.remainderMStr = @"获取短信余额失败  · · ·";
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
     }];
     self.view = self.sendView;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
+    
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -70,7 +75,7 @@
                 [weakself addAddress];
             };
             view.sendMessageSuccess = ^(NSString *yuer) {
-                [weakself.rightBtn setTitle:[NSString stringWithFormat:@"剩余%@条",yuer] forState:UIControlStateNormal];
+                [weakself.rightBtn setTitle:[NSString stringWithFormat:@"剩余%@条  · · ·",yuer] forState:UIControlStateNormal];
             };
             view;
         });
@@ -83,10 +88,11 @@
         _rightBtn = ({
             UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [backButton setTitle:@"获取短信余额失败" forState:UIControlStateNormal];
+            [backButton setTitle:self.remainderMStr forState:UIControlStateNormal];
             backButton.titleLabel.font = FONTSIZE(16);
             [backButton sizeToFit];
             backButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+            [backButton addTarget:self action:@selector(gotoHaveSend) forControlEvents:UIControlEventTouchUpInside];
             backButton;
         });
     }
@@ -95,6 +101,10 @@
 - (void)addAddress
 {
     [self.navigationController pushViewController:[MSContactsViewController new] animated:YES];
+}
+- (void)gotoHaveSend
+{
+    [self.navigationController pushViewController:[MSHaveSendViewController new] animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
